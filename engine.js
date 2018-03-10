@@ -100,6 +100,34 @@ function calculateAmountOwedByWeight(userSelectionFromForm, userEnterWeight)
   else if(userSelectionFromForm == "First-ClassPackageService—Retail")
   {
 
+    if(userEnterWeight < 5)
+    {
+      price = 3.50;
+    }
+    else if(userEnterWeight < 9)
+    {
+      price = 3.75;
+    }
+    else if(userEnterWeight < 10)
+    {
+      price = 4.10;
+    }
+    else if(userEnterWeight < 11)
+    {
+      price = 4.45;
+    }
+    else if(userEnterWeight < 12)
+    {
+      price = 4.80;
+    }
+    else if(userEnterWeight < 13)
+    {
+      price = 5.15;
+    }
+    else
+    {
+      price = 5.50;
+    }
   }
 
   var JSONdata = {selection: userSelectionFromForm, weight: userEnterWeight, amountOwed: price};
