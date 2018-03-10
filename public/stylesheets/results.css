@@ -2,8 +2,11 @@ body
 {
   background-color: lightgray;
 }
-form
+.centered
 {
-  background-color: lightgray;
-  border: 4px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+
+  text-align: center;
 }
