@@ -130,6 +130,8 @@ function calculateAmountOwedByWeight(userSelectionFromForm, userEnterWeight)
     }
   }
 
+  price = parseFloat(Math.round(price * 100) / 100).toFixed(2);
+
   var JSONdata = {selection: userSelectionFromForm, weight: userEnterWeight, amountOwed: price};
   return JSONdata;
 }
