@@ -37,8 +37,9 @@ function calculateAmountOwedByWeight()
   {
 
   }
-
-  return JSONdata = {selection: userSelectionFromForm}, weight: userEnterWeight, price: price;
+  
+  var JSONdata = {selection: userSelectionFromForm}, weight: userEnterWeight, price: price;
+  return JSONdata;
 }
 
 function sendData(request, responce)
