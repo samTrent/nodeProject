@@ -1,9 +1,7 @@
 
 
-function calculateAmountOwedByWeight()
+function calculateAmountOwedByWeight(userSelectionFromForm, userEnterWeight)
 {
-  var userSelectionFromForm = request.query.userSelection
-  var userEnterWeight = request.query.weight
   var price = 0;
 
   if(userSelectionFromForm == "Letters(Stamped)")
@@ -37,7 +35,7 @@ function calculateAmountOwedByWeight()
   {
 
   }
-  
+
   var JSONdata = {selection: userSelectionFromForm}, weight: userEnterWeight, price: price;
   return JSONdata;
 }
@@ -45,7 +43,9 @@ function calculateAmountOwedByWeight()
 function sendData(request, responce)
 {
   var userSelectionFromForm = request.query.userSelection
-  var JSONdata = calculateAmountOwedByWeight();
+  var userEnterWeight = request.query.weight
+
+  var JSONdata = calculateAmountOwedByWeight(userSelectionFromForm, userEnterWeight);
   responce.render('results', JSONdata); // display the results page and pass data to it
 }
 
