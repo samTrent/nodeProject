@@ -9,7 +9,7 @@ function test(request, responce)
 
 function sendData(request, responce)
 {
-  var userSelectionFromForm = requst.query.userSelection
+  var userSelectionFromForm = request.query.userSelection
   var JSONdata = {data: userSelectionFromForm};
   responce.render('results', JSONdata); // display the results page and pass data to it
 }
