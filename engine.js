@@ -25,18 +25,84 @@ function calculateAmountOwedByWeight(userSelectionFromForm, userEnterWeight)
   }
   else if(userSelectionFromForm == "Letters(Metered)")
   {
-
+    if(userEnterWeight < 2)
+    {
+      price = 0.47;
+    }
+    else if(userEnterWeight < 3)
+    {
+      price = 0.68;
+    }
+    else if(userEnterWeight < 3.5)
+    {
+      price = 0.89;
+    }
+    else
+    {
+      price = 1.10;
+    }
   }
   else if(userSelectionFromForm == "LargeEnvelopes(Flats)")
   {
-
+    if(userEnterWeight < 2)
+    {
+      price = 1.00;
+    }
+    else if(userEnterWeight < 3)
+    {
+      price = 1.21;
+    }
+    else if(userEnterWeight < 4)
+    {
+      price = 1.42;
+    }
+    else if(userEnterWeight < 5)
+    {
+      price = 1.63;
+    }
+    else if(userEnterWeight < 6)
+    {
+      price = 1.84;
+    }
+    else if(userEnterWeight < 7)
+    {
+      price = 2.05;
+    }
+    else if(userEnterWeight < 8)
+    {
+      price = 2.26;
+    }
+    else if(userEnterWeight < 9)
+    {
+      price = 2.47;
+    }
+    else if(userEnterWeight < 10)
+    {
+      price = 2.68;
+    }
+    else if(userEnterWeight < 11)
+    {
+      price = 2.89;
+    }
+    else if(userEnterWeight < 12)
+    {
+      price = 3.10;
+    }
+    else if(userEnterWeight < 13)
+    {
+      price = 3.31;
+    }
+    else
+    {
+      price = 3.52;
+    }
   }
   else if(userSelectionFromForm == "First-ClassPackageService—Retail")
   {
 
   }
 
-  var JSONdata = {selection: userSelectionFromForm, weight: userEnterWeight, price: price};
+  var JSONdata = {selection: userSelectionFromForm, weight: userEnterWeight, amountOwed: price};
   return JSONdata;
 }
 
