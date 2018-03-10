@@ -13,5 +13,5 @@ express()
   {
     console.log('recieved requst');
   })
-  .get('/run', engine.test)
+  .get('/run', engine.sendData)
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))

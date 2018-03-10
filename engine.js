@@ -7,7 +7,7 @@ function test(request, responce)
   responce.render('results', JSONdata); // display the results page and pass data to it
 }
 
-function test(request, responce)
+function sendData(request, responce)
 {
   var userSelectionFromForm = requst.query.userSelection
   var JSONdata = {data: userSelectionFromForm};
@@ -16,4 +16,4 @@ function test(request, responce)
 
 
 //export the function to our server
-module.exports = {test :test};
+module.exports = {sendData :sendData};
