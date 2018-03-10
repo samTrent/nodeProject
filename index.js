@@ -2,9 +2,16 @@ const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000
 
+var engine = require(path.join(__dirname + '/engine.js'));
+
+
 express()
   .use(express.static(path.join(__dirname, '/public')))
-  .set('views', path.join(__dirname, '/views'))
+  .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', function()
+  {
+    console.log('recieved requst');
+  })
+  .get('/run', engine.test)
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
