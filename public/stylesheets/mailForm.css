@@ -6,6 +6,11 @@ body
 .centered
 {
   margin-left: auto;
-   margin-right: auto;
-   width: 100px;
+  margin-right: auto;
+  width: 100px;
+}
+
+form
+{
+  border: 4px solid black;
 }
